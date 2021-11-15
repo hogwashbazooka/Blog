@@ -1,0 +1,12 @@
+C:\Interad\Blog\Blog.Domain\bin\Debug\net5.0\Blog.Domain.deps.json
+C:\Interad\Blog\Blog.Domain\bin\Debug\net5.0\Blog.Domain.dll
+C:\Interad\Blog\Blog.Domain\bin\Debug\net5.0\ref\Blog.Domain.dll
+C:\Interad\Blog\Blog.Domain\bin\Debug\net5.0\Blog.Domain.pdb
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.csproj.AssemblyReference.cache
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.AssemblyInfoInputs.cache
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.AssemblyInfo.cs
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.csproj.CoreCompileInputs.cache
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.dll
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\ref\Blog.Domain.dll
+C:\Interad\Blog\Blog.Domain\obj\Debug\net5.0\Blog.Domain.pdb

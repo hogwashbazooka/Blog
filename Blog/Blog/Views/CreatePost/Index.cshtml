@@ -1,0 +1,20 @@
+﻿@model Blog.Domain.BlogPost
+
+<div class="main-container">
+    <article class="create-post">
+        <h2 class="create-post-header">Create New Post</h2>
+        <form asp-action="CreatePost" method="post">
+            <label>Post Title</label><br>
+            <input asp-for="Title" type="text" class="text-input post-title-input" /><br>
+            <label>Post</label><br>
+            <textarea asp-for="Content" type="text" class="text-input post-input"></textarea><br>
+            <div class="post-submit">
+                <div>
+                    <label for="tag-input">Tags</label><br>
+                    <input type="text" class="text-input" id="tag-input" />
+                </div>
+                <button type="submit" class="button">Submit Post</button>
+            </div>
+        </form>
+    </article>
+</div>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Blog</title>
+    <link href="~/css/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main-header-container">
+        <header class="main-header">
+            <img src="/img/logo.png" alt="logo" height="115" width="115" />
+            <nav class="main-navigation">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="CreatePost" asp-action="Index">Create Post</a>
+                @*<a href="#" onclick="openLogin()">Login</a>*@
+                <a asp-area="Identity" asp-page="/Account/Register">Register</a>
+                @*<a asp-controller="CreateAccount" asp-action="Index">Create Account</a>*@
+                <a asp-area="Identity" asp-page="/Account/Login">Login</a>
+            </nav>
+        </header>
+    </div>
+
+    <div class="login-window" id="login-window">
+        <h2>Login</h2>
+        <form class="login-form">
+            <label class="input-label" for="email">E-Mail</label><br>
+            <input type="text" class="text-input" id="email" />
+            <br>
+            <label class="input-label" for="password">Password</label><br>
+            <input type="password" name="password" class="text-input" id="password" />
+            <br>
+            <button type="submit" class="button" value="Login">Login</button>
+            <button type="button" class="button" value="Cancel" onclick="closeLogin()">Cancel</button>
+        </form>
+    </div>
+
+    @RenderBody()
+
+    <footer>
+        <a class="privacy-policy" href="#">Privacy Policy</a>
+        <span>&copy; Copyright 2021 Code Blog</span>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+
+<script>
+    function closeLogin() {
+        document.getElementById('login-window').style.display = 'none';
+    }
+
+    function openLogin() {
+        document.getElementById('login-window').style.display = 'block';
+    }
+</script>
+</html>

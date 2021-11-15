@@ -1,0 +1,13 @@
+﻿
+@model Blog.Domain.BlogPost
+
+<li>
+    <a asp-controller="Home" asp-action="Index" asp-route-id="@Model.Id" class="rec-post">
+        @*<img src="/img/laura-jones.jpg" alt="picture of author" height="30" width="30" class="author-image"/>*@
+        <h2>@Model.Title</h2>
+        <span class="rec-post-info">
+            <span>Rating: @Model.Rating</span>
+            <span>Date: @Model.PostDate.ToShortDateString() </span>
+        </span>
+    </a>
+</li>

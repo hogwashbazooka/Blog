@@ -1,0 +1,40 @@
+﻿
+@model Blog.Web.ViewModels.HomeViewModel
+
+<div class="main-container">
+    <article>
+        <div class="blog-post">
+            <div class="post-header">
+                <h1>@Model.BlogPost.Title</h1>
+                <div class="rating">
+                    <strong>@Model.BlogPost.Rating</strong>
+                    <a asp-action="UpVote" asp-route-id="@Model.BlogPost.Id" class="rate-arrow">&#8679;</a>
+                    <a asp-action="DownVote" asp-route-id="@Model.BlogPost.Id" class="rate-arrow">&#8681</a>
+                </div>
+            </div>
+            <div class="post-info">
+                <img src="/img/laura-jones.jpg" alt="picture of author" height="60" width="60" class="author-image" />
+                <strong>Laura Jones</strong>
+                <span>@Model.BlogPost.PostDate.ToShortDateString()</span>
+            </div>
+            <p>
+                @Html.Raw(Model.BlogPost.Content)
+            </p>
+        </div>
+        <div class="nav-next-post">
+            <a asp-action="Index" asp-route-id="@Model.RecommendedPosts.FirstOrDefault()?.Id" class="next-post-button button">Next Post</a>
+            <a asp-action="DeletePost" asp-route-id="@Model.BlogPost.Id" class="next-post-button button">Delete Post</a>
+        </div>
+    </article>
+
+    <aside>
+        <div class="recommended-posts">
+            <ul>
+                @foreach (var post in Model.RecommendedPosts)
+                {
+                    <partial name="_RecommendedPost" model="post"/>
+                }
+            </ul>
+        </div>
+    </aside>
+</div>
